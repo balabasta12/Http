@@ -13,7 +13,7 @@ def requests_get(urls): #Функция получения http запроса
     r = (requests.get(url) for url in urls)
     return r
 
-def superheros_intelligence(): #Функция Получения супер интелекта
+def superheros_intelligence(): #Функция получения супер интелекта
     superhero = []
     for item in requests_get(urls): #проходим по списку
         intelligence = item.json() # и получаем информацию с запросов
@@ -26,7 +26,7 @@ def superheros_intelligence(): #Функция Получения супер и�
     name = '' #для имен
     for intelligence in superhero: #Цикл для получения интелекта герооев
         if superheros_intelligence < int(intelligence['intelligence']): #Условие на сравнение интелекта
-            superheros_intelligence = int(intelligence['intelligence']) #каждый проход цикла получаем нове значение и сравнием со старым
+            superheros_intelligence = int(intelligence['intelligence']) #каждый проход цикла получаем новое значение и сравниваем со старым
             name = intelligence['name'] #Получаем имена
     print(f"Самый интелектуальный {name}, интелект: {superheros_intelligence}")
 
@@ -34,7 +34,7 @@ def superheros_intelligence(): #Функция Получения супер и�
 #     superheros_intelligence()
 
 
-class YaUploader: #Как сделал вообще не поёму
+class YaUploader: #Как сделал вообще не пойму
     def __init__(self, token: str):
         self.token = token
 
